@@ -11,7 +11,7 @@ public class ViewExecuta {
 		System.out.println(ingresso.getDesconto());
 		ingresso = ctrlIngresso.IngressoCalcula("27/10/2015", "Idoso", false,6);
 		System.out.println(ingresso.getDesconto());
-		ingresso = ctrlIngresso.IngressoCalcula("27/10/2015", "Idoso", false,6.6);
+		ingresso = ctrlIngresso.IngressoCalcula("27/10/2015", "Crianca", false,5.6);
 		System.out.println(ingresso.getDesconto());
 	}
 }
