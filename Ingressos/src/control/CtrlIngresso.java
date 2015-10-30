@@ -15,15 +15,13 @@ public class CtrlIngresso
 
 	
 	
-	public Ingresso IngressoCalcula(String data,String tpIngresso, boolean feriado)
+	public Ingresso IngressoCalcula(String data,String tpIngresso, boolean feriado,double valorIngressoBruto)
 	{
 		Ingresso ingresso = new Ingresso();
-		double valorIngressoBruto;
 		
 		
 		if(tpIngresso.equalsIgnoreCase("Estudantes"))
 		{
-			valorIngressoBruto=8.0;
 			if(getDiaSemana(data)==3)
 			{
 				ingresso.setDesconto(CalculaDesconto(valorIngressoBruto, 50));
@@ -45,7 +43,6 @@ public class CtrlIngresso
 		
 		if(tpIngresso.equalsIgnoreCase("Idoso"))
 		{
-			valorIngressoBruto=6.0;
 			if(getDiaSemana(data)==1)
 			{
 				ingresso.setDesconto(CalculaDesconto(valorIngressoBruto, 10));
@@ -82,7 +79,6 @@ public class CtrlIngresso
 		}
 		if(tpIngresso.equalsIgnoreCase("Criança")||tpIngresso.equalsIgnoreCase("Crianca"))
 		{
-			valorIngressoBruto=5.5;
 			if(getDiaSemana(data)==1)
 			{
 				ingresso.setDesconto(CalculaDesconto(valorIngressoBruto, 10));
